@@ -28,11 +28,14 @@ btn.addEventListener("click", (e) => {
         
         <a href="${data.html_url} " target="_blank" class="btn btn-primary">Check Github Profile</a>
       </div>
-      </div>
-      <h3 class="text-center">User Repositerys : ${data.public_repos}</h3>
+      <h3 class="text-center">User Repositories : ${data.public_repos}</h3>
       
-      <button class='btn btn-primary' id='showbtn'>Show Repositary data
+      <h6 class="text-center my-2">Total Followers : ${data.followers}</h6>
+      <h6 class="text-center my-2">Total Following : ${data.following}</h6>
+      <button class='btn btn-dark ' id='showbtn'>Show Repositories data
           </button>
+      </div>
+
       <div class="accordion container my-2" id="accordionExample">
 
       </div>`;
@@ -69,9 +72,9 @@ btn.addEventListener("click", (e) => {
                   <div class="accordion-body">
                     <strong>${e.description}</strong> 
                     </div>
-                    <button class="btn btn-primary my-3" type="button" href='${e.html_url}'>
-                            Go to ${e.name} Repo
-                    </button>
+                    <a href='${e.html_url}'>  <button class="btn btn-primary my-3" type="button">
+                           Go to ${e.name} Repo
+                    </button></a>
                 </div>
               </div>
               `;
